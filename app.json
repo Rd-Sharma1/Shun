@@ -4,11 +4,11 @@
     "slug": "Shun",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/android-icon-background.png",
     "scheme": "shun",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/android-icon-background.png"
     },
     "android": {
       "adaptiveIcon": {

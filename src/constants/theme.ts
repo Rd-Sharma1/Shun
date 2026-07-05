@@ -1,65 +1,41 @@
-/**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
- */
-
-import '@/global.css';
-
-import { Platform } from 'react-native';
+import { useFonts } from "expo-font";
 
 export const Colors = {
-  light: {
-    text: '#000000',
-    background: '#ffffff',
-    backgroundElement: '#F0F0F3',
-    backgroundSelected: '#E0E1E6',
-    textSecondary: '#60646C',
-  },
-  dark: {
-    text: '#ffffff',
-    background: '#000000',
-    backgroundElement: '#212225',
-    backgroundSelected: '#2E3135',
-    textSecondary: '#B0B4BA',
-  },
-} as const;
+  kanji: "#4a3528", //Dark Coffee
+  macros: "#6e8b5d", //Dusty Olive
+  accent: "#a63a32", //Brown Red
 
-export type ThemeColor = keyof typeof Colors.light & keyof typeof Colors.dark;
+  text: "#262626", //Carbon Black
 
-export const Fonts = Platform.select({
-  ios: {
-    /** iOS `UIFontDescriptorSystemDesignDefault` */
-    sans: 'system-ui',
-    /** iOS `UIFontDescriptorSystemDesignSerif` */
-    serif: 'ui-serif',
-    /** iOS `UIFontDescriptorSystemDesignRounded` */
-    rounded: 'ui-rounded',
-    /** iOS `UIFontDescriptorSystemDesignMonospaced` */
-    mono: 'ui-monospace',
-  },
-  default: {
-    sans: 'normal',
-    serif: 'serif',
-    rounded: 'normal',
-    mono: 'monospace',
-  },
-  web: {
-    sans: 'var(--font-display)',
-    serif: 'var(--font-serif)',
-    rounded: 'var(--font-rounded)',
-    mono: 'var(--font-mono)',
-  },
-});
+  primary: "#b85c22", //Autumn Ember
+  surface: "#f7f3ec", //Parchment
+  background: "#faf8f5", //Bright Snow
+};
 
 export const Spacing = {
-  half: 2,
-  one: 4,
-  two: 8,
-  three: 16,
-  four: 24,
-  five: 32,
-  six: 64,
-} as const;
+  sm: 4,
+  m: 8,
+  l: 12,
+  xl: 16,
+  xxl: 20,
+  big: 24,
+};
 
-export const BottomTabInset = Platform.select({ ios: 50, android: 80 }) ?? 0;
-export const MaxContentWidth = 800;
+export const Fonts = {
+  regular: "IBMPlexSans-Regular",
+  medium: "IBMPlexSans-Medium",
+  bold: "IBMPlexSans-Bold",
+  serif: "DMSerifDisplay-Regular",
+  serifItalic: "DMSerifDisplay-Italic",
+  japanese: "NotoSansJP-Regular",
+};
+
+export const fontConfig = {
+  [Fonts.regular]: require("../../assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-Regular.ttf"),
+  [Fonts.medium]: require("../../assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-Medium.ttf"),
+  [Fonts.bold]: require("../../assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-Bold.ttf"),
+  [Fonts.serif]: require("../../assets/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf"),
+  [Fonts.serifItalic]: require("../../assets/fonts/DM_Serif_Display/DMSerifDisplay-Italic.ttf"),
+};
+
+export const useAppFonts = () => useFonts(fontConfig);
