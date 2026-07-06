@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     //  ...StyleSheet.absoluteFill,
     width: "100%",
     height: "100%",
-    opacity: 0.96,
+    opacity: 0.9,
     zIndex: -1,
     // backgroundColor: 'green',
   },
@@ -124,13 +124,13 @@ const styles = StyleSheet.create({
   footer: {
     alignItems: "center",
     justifyContent: "space-around",
-    // backgroundColor: 'red',
+    // backgroundColor: ,
   },
   footerText: {
     alignItems: "center",
     position: "absolute",
     bottom: -Spacing.xl,
-    // backgroundColor: Colors.macros + '20'
+    backgroundColor: Colors.surface + "15",
   },
   bigLabel: {
     fontFamily: Fonts.bold,

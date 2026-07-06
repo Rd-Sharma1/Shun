@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
   },
 
   highlightMeal: {
-    height: "80%",
+    height: "84%",
     width: ScreenX * 0.8,
     padding: Spacing.xl,
     textAlign: "center",
