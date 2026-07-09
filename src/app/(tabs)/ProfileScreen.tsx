@@ -1,15 +1,14 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-// add tabs
-const index = () => {
+const ProfileScreen = () => {
   return (
     <View>
-      <Text>index</Text>
+      <Text>ProfileScreen</Text>
     </View>
   );
 };
 
-export default index;
+export default ProfileScreen;
 
 const styles = StyleSheet.create({});

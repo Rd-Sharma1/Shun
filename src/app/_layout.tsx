@@ -9,7 +9,7 @@ export default function RootLayout() {
   return (
     <GestureHandlerRootView style={styles.root}>
       <SafeAreaProvider>
-        <SafeAreaView style={styles.container} edges={["top", "bottom"]}>
+        <SafeAreaView style={styles.container}>
           <StatusBar style="dark" />
           <Stack
             screenOptions={{
@@ -18,7 +18,7 @@ export default function RootLayout() {
                 backgroundColor: Colors.background,
               },
             }}
-          />
+          ></Stack>
         </SafeAreaView>
       </SafeAreaProvider>
     </GestureHandlerRootView>
